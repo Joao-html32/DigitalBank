@@ -1,0 +1,17 @@
+public class digitalBank {
+  public static void main(String[] args) {
+    contaBancaria objeto = new contaBancaria("1234-5", "JoaoVitor", 100.00);
+
+    System.out.println("Conta criada com sucesso no Itaú!");
+     System.out.println("=== ITAÚ DIGITAL ===");
+   System.out.println("Saldo inicial: " + objeto.getSaldo());
+   System.out.println("\n[Tentativa 1] Sacando R$ 150.00...");
+    objeto.sacar(150.00);
+    System.out.println("\n[Tentativa 2] Depositando R$ 50.00...");
+    objeto.depositar(50.00);
+    System.out.println("Saldo atual: R$ " + objeto.getSaldo());
+    System.out.println("\n[Tentativa 3] Sacando R$ 150.00...");
+    objeto.sacar(150.00);
+     System.out.println("Saldo atual: R$ " + objeto.getSaldo());
+  }
+}
