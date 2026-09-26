@@ -14,7 +14,7 @@ public final class Protect {
                     + ")";
 
     
-    public static final String DB_URL = "jdbc:mysql://localhost:3306/digitalbank";
+    public static final String DB_URL = "jdbc:mysql://localhost:3306/digital_bank";
     public static final String DB_USER = "root";
-    public static final String DB_PASSWORD = "sua_senha_do_banco";
+    public static final String DB_PASSWORD = "kikolokokiko";
 }
