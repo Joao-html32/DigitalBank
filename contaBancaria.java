@@ -1,39 +1,34 @@
-public class ContaBancaria {
+public class contaBancaria {
 
     private String numeroDaConta;
-    private String titular;
+    private String agencia;
+    private Cliente titular;
     private double saldo;
     
-    public String getTitular() {
-        return this.titular;
-    }
-
-    public ContaBancaria(String numero, String nomeDoTitular, double saldo) {
+    public contaBancaria(String numero, Cliente titular, double saldo) {
         this.numeroDaConta = numero;
-        this.titular = nomeDoTitular;
+        this.titular = titular;
         this.saldo = Double.isFinite(saldo) && saldo >= 0 ? saldo : 0;
     }
-    
+    public Cliente getTitular() {
+        return this.titular;
+    }
     public double getSaldo() {
         return this.saldo; 
     }
-
-    public void transferirPix(double valor, ContaBancaria contaDestino) {
+    public void transferirPix(double valor, contaBancaria contaDestino) {
         if (contaDestino == null) {
             System.out.println("Erro: Conta de destino inválida.");
             return;
         }
-
         if (Double.isFinite(valor) && valor > 0 && valor <= this.saldo) {
             this.saldo -= valor; 
             contaDestino.depositar(valor);
-            
-            System.out.println("Pix de R$ " + valor + " enviado com sucesso para " + contaDestino.getTitular() + "!");
+            System.out.println("Pix de R$ " + valor + " enviado com sucesso para " + contaDestino.getTitular().getNome() + "!");
         } else {
             System.out.println("Erro: Pix recusado! Saldo insuficiente ou valor inválido.");
         }
     }
-
     public void depositar(double valor) {
         if (Double.isFinite(valor) && valor > 0 && valor <= Double.MAX_VALUE - this.saldo) {
             this.saldo += valor;
@@ -42,7 +37,6 @@ public class ContaBancaria {
             System.out.println("Erro: Depósito recusado! O valor deve ser positivo.");
         }
     }
-    
     public void sacar(double valor) {
         if (Double.isFinite(valor) && valor > 0 && valor <= this.saldo) {
             this.saldo -= valor;
