@@ -13,7 +13,6 @@ public class Cliente {
         this.dataDeNascimento = dataDeNascimento;
         this.celular = celular;
     }
-
     public String getNome() {
         return this.nome;
     }
@@ -23,15 +22,10 @@ public class Cliente {
     public LocalDate getDataDeNascimento() {
         return this.dataDeNascimento;
     }
-
-    // Getter para o Celular
     public String getCelular() {
         return this.celular;
     }
-
     public void setNome(String nome) {
         this.nome = nome;
     }
-
-   
 }
