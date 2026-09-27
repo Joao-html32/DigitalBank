@@ -24,7 +24,7 @@ Para afastar as regras de negócio das consultas de banco de dados e manter o si
 
 ---
 
-## 🗄️ Modelagem do Banco de Dados Relacional (MySQL)
+##  Modelagem do Banco de Dados Relacional (MySQL)
 
 A inteligência dos dados está estruturada em scripts relacionais otimizados:
 * **Tabelas com Integridade Referencial:** Configuração de chaves estrangeiras (`FOREIGN KEY`) conectando Clientes, Contas Bancárias e Históricos.
