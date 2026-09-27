@@ -1,10 +1,10 @@
-# 🏦 DigitalBank - Core Bancário em Java & Persistência SQL
+#  DigitalBank - Core Bancário em Java & Persistência SQL
 
 Este projeto simula o núcleo de processamento e controle de um banco digital moderno. A aplicação combina regras de negócio robustas em **Java** com persistência de dados em **SQL (MySQL)**, utilizando padrões de arquitetura de mercado para garantir alta disponibilidade, segurança e integridade transacional.
 
 ---
 
-## 🏗️ Arquitetura do Projeto & Padrões de Mercado
+##  Arquitetura do Projeto & Padrões de Mercado
 
 Para afastar as regras de negócio das consultas de banco de dados e manter o sistema escalável, o projeto foi estruturado seguindo os padrões mais consolidados do mercado backend:
 
@@ -15,7 +15,7 @@ Para afastar as regras de negócio das consultas de banco de dados e manter o si
 
 ---
 
-## ⚡ Funcionalidades e Regras de Negócio Financeiras
+##  Funcionalidades e Regras de Negócio Financeiras
 
 1. **Transferência via Pix:** O método `transferirPix` garante a movimentação atômica de saldos entre contas de origem e destino, validando limites e impedindo fraudes na memória.
 2. **Camada de Persistência Segura:** Uso de `PreparedStatement` com parâmetros parametrizados (`?`) contra ataques de *SQL Injection*.
@@ -32,7 +32,7 @@ A inteligência dos dados está estruturada em scripts relacionais otimizados:
 
 ---
 
-## 📂 Estrutura de Arquivos Atualizada
+##  Estrutura de Arquivos Atualizada
 
 * `Cliente.java`: Entidade de modelo encapsulada contendo as regras cadastrais.
 * `ContaBancaria.java`: Lógica financeira central (saques, depósitos e Pix).
@@ -45,7 +45,7 @@ A inteligência dos dados está estruturada em scripts relacionais otimizados:
 
 ---
 
-## 🚀 Como Executar
+##  Como Executar
 
 1. Certifique-se de possuir o Java JDK e um servidor MySQL configurados.
 2. Execute o script `estrutura.sql` e `procedimentos.sql` no seu servidor de banco de dados local.
